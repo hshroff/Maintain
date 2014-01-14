@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:columnCount="2"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:rowCount="4" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="0"
+        android:text="Notes"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/RecordWO_WorkDone"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="0"
+        android:lines="8"
+        android:scrollbars="vertical"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/Verify_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:text="Picture/Video"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	<ImageButton
+        android:id="@+id/RecordWO_TakePhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:src="@drawable/ic_action_photo"/>
+    
+    <TextView
+        android:id="@+id/Verify_Resource_ShortDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signature"
+        android:layout_row="2"
+        android:layout_column="0"
+        
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="2"
+        layout="@layout/fragment_signature_panel" />
+
+    <!--
+    <Button
+        android:id="@+id/RecordWO_PictureButton"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="0"
+        android:text="Take Picture" />
+
+    <Button
+        android:id="@+id/RecordWO_VideoButton"
+        android:layout_column="3"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="0"
+        android:text="Take Video" />
+    -->
+
+    
+</GridLayout>

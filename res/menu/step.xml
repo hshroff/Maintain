@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/Step_IETP_Action" android:title="IETP" android:showAsAction="always" android:icon="@drawable/ic_ietp_action"></item>
+    <item android:id="@+id/Step_VIDEO_Action" android:title="VIDEO" android:showAsAction="always" android:icon="@drawable/ic_action_video"></item>
+    
+
+</menu>

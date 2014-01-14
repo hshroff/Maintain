@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    
+    <ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1">
+	<TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:text="Notes"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/WorkDone_WorkDone"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:ems="10"
+                android:inputType="none"
+                android:lines="8"
+                android:scrollbars="vertical" >
+            </EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/WorkDone_textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left"
+                android:text="Task Picture/Video"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/WorkDone_pictureImageView"
+                android:layout_width="196dp"
+                android:layout_height="196dp"
+                android:layout_column="1"
+                android:layout_gravity="left|top" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/WorkDone_Resource_ShortDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:text="Signature"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/WorkDone_signatureImageView"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:contentDescription="Signature" />
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+</LinearLayout>

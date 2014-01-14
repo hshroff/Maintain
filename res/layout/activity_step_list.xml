@@ -1,0 +1,27 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StepListActivity" >
+
+    <TableLayout
+        android:id="@+id/StepListTableView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <CheckBox
+                android:id="@+id/StepListCompleteAllCheckBox"
+                android:layout_gravity="right"
+                android:onClick="completeAll"
+                android:text="Complete All"
+                android:textSize="22sp" />
+
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

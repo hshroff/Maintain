@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="title_activity_settings">Maintain Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_header_general">General</string>
+    
+    <string name="pref_title_step_display">Step Display Type</string>
+	
+    <string-array name="pref_step_display_options">
+        <item>Auto</item>
+        <item>Check List</item>
+        <item>Swipe List</item>
+    </string-array>
+    
+    <string name="pref_title_assignedTo">Device ID</string>
+    
+    <string name="pref_sync_url">Sync IP</string>
+    
+</resources>

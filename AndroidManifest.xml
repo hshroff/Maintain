@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.freyasystems.maintain2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Freya" >
+        <activity
+            android:name="com.freyasystems.maintain2.TasksActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.freyasystems.maintain2.TabsFragmentActivity" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.StepSwipeActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.photo.PhotoIntentActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.VideoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.FullScreenImageActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.StepListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.StepDetailActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.freyasystems.maintain2.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity android:name=".util.SyncActivity" android:label="@string/app_name"></activity>
+    </application>
+
+</manifest>

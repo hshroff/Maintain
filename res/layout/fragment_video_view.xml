@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <VideoView
+        android:id="@+id/step_video_view"
+        android:layout_width="600dp"
+        android:layout_height="350dp" />
+
+</RelativeLayout>
