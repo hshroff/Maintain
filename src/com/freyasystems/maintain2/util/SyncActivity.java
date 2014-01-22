@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.freyasystems.maintain2.util;
 
@@ -33,7 +33,7 @@ import com.google.gson.Gson;
 
 /**
  * This class contains all sync logic (get and put) for the application.
- * 
+ *
  * @author shroffh Freya Systems, LLC.
  */
 public class SyncActivity extends Activity {
@@ -42,11 +42,6 @@ public class SyncActivity extends Activity {
 	private String SYNC_IP = "192.168.1.9:8080";
 
 	private String BASE_URL = "http://" + SYNC_IP + "/MaintainOps/rest/sync"; // "http://192.168.1.10:8080/MaintainOps/rest/sync";
-	// private static String BASE_URL =
-	// "http://130.76.114.148:8080/MaintainOps/rest/sync";
-	// private static String BASE_URL =
-	// "http://localhost:8080/MaintainOps/rest/sync";
-	// private static String BASE_URL = "http://50.63.60.62:8080/maintain";
 
 	private String media_url = BASE_URL + "/download?mediaItemID=";
 	private String video_media_url = BASE_URL + "/stream?mediaItemID=";
@@ -197,28 +192,28 @@ public class SyncActivity extends Activity {
 	}
 
 	private void sendStatus(TaskVO task) throws InterruptedException, ExecutionException {
-		//Task status		
+		//Task status
 		SendStatus sendStatusRequest = new SendStatus();
 		String taskResult = "";
 		StringBuilder url = new StringBuilder(send_status_task_url)
 				.append("?")
 				.append("taskID=").append(task.getTaskID())
 				.append("&state=").append(task.getState());
-			
+
 		taskResult = sendStatusRequest.execute(url.toString()).get();
-		
+
 		Log.d(TAG, "sendStatus taskResult " + taskResult);
-		
+
 		//Steps status
 		List<StepVO> steps = maintainDS.getSteps(task);
 		for (StepVO step : steps) {
 			SendStatus sendStepStatusRequest = new SendStatus();
-			
+
 			StringBuilder stepUrl = new StringBuilder(send_status_step_url)
 			.append("?")
 			.append("stepID=").append(step.getStepID())
 			.append("&state=").append(step.getState());
-			
+
 			String stepResult = sendStepStatusRequest.execute(stepUrl.toString()).get();
 			Log.d(TAG, "sendStatus stepResult " + stepResult);
 		}
